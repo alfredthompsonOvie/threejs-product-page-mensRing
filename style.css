@@ -1,0 +1,87 @@
+:root {
+  box-sizing: border-box;
+}
+*,*::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+#app {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+main {
+  display: grid;
+  grid-template-columns: .5fr 11fr .5fr;
+  grid-template-rows: repeat(4, auto);
+}
+.section {
+  min-height: 100vh;
+}
+.hero {
+  grid-column: 2;
+  grid-row: 1;
+  /* background-color: teal; */
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.scene__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 10;
+  background-color: red;
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+.features {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: aqua;
+  position: relative;
+  z-index: 10;
+}
+.products {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: burlywood;
+  position: relative;
+  z-index: 20;
+}
+.contact {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: gainsboro;
+  position: relative;
+  z-index: 20;
+}
+footer {
+  background-color: beige;
+  min-height: 5em;
+}
+.tag {
+  max-width: 350px;
+}
+.heading {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.heading::after {
+  content: 'ov7 Jewelry';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  letter-spacing: .2em;
+  z-index: -1;
+  opacity: .3;
+  font-style: italic;
+}
+.text { 
+}
